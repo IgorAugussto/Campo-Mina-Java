@@ -1,0 +1,24 @@
+package br.com.IgorAugusto.cm.modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Campo {
+	
+	private final int linha;
+	private final int coluna;
+	
+	//por padrão o boolean recebe o valor falso;
+	private boolean isAberto;
+	private boolean isMinado;
+	private boolean isMarcado;
+	
+	List<Campo> vizinhos = new ArrayList<>();
+	
+	public Campo(int linha, int coluna) {
+		this.linha = linha;
+		this.coluna = coluna;
+	}
+
+	
+}

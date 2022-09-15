@@ -1,0 +1,38 @@
+package faculdade;
+
+import java.util.Scanner;
+
+public class MAPA {
+
+	
+	public static void main(String[] args) {
+		
+		int a, b, c;
+		double x1, x2;
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Informe o valor de a: ");
+		a = entrada.nextInt();
+		System.out.println("Informe o valor de b:");
+		b = entrada.nextInt();
+		System.out.println("Informe o valor de c: ");
+		c = entrada.nextInt();
+		
+		entrada.close();
+		
+		x1 = (-b + Math.sqrt(MAPA.calcularDelta(a, b, c))) / (2 * a);
+		x2 = (-b - Math.sqrt(MAPA.calcularDelta(a, b, c))) / (2 * a);
+		
+		System.out.println("O valor de Delta é: " + MAPA.calcularDelta(a, b, c));			
+		System.out.println("O valor de x1 é: " + x1);
+		System.out.println("O valor de x2 é: " + x2);
+	}
+	
+	private static double calcularDelta(int a, int b, int c) throws IllegalArgumentException{
+        double delta = Math.pow(b,2) - 4*a*c;
+        if (delta<0) {
+            throw new IllegalArgumentException("Delta é: "+delta+"\nNão existem raízes reais.");
+        }
+        return delta;
+    }
+}

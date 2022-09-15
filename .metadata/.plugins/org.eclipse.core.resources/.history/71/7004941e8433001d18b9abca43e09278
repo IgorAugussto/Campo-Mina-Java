@@ -1,0 +1,19 @@
+package br.com.IgorAugusto.cm;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Teste {
+// para o teste funcionar é necessario ter o "@Test"
+
+	@Test
+	void test() {
+		
+		int a = 1 + 1;
+		
+		assertEquals(2, a);
+		//primieor parâmetro é o valor que eu espero e o segundo é o valor obtido.
+	}
+
+}
